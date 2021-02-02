@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattleshipNight</title>
+    <style>
+        :root {
+            --perRow: 3;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: #cccccc;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #gameboard {
+            display: flex;
+            flex-wrap: wrap;
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            background: rgb(50, 99, 190);
+        }
+
+        .tile {
+            width: calc(100%/var(--perRow));
+            height: calc(100%/var(--perRow));
+            border: 1px solid white;
+        }
+
+        .battleship {
+            background: green;
+        }
+
+        .shot {
+            background: orange;
+        }
+
+        .winPlayer1 {
+            background: red;
+        }
+
+        .winPlayer2 {
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Battleship</h1>
+    <div id="gameboard"></div>
+        <!-- we have nothing inside here because we added tiles inside of function init -->
+        <!-- <div class="tile">0</div>
+                <div class="tile">1</div>
+                <div class="tile">2</div>
+                <div class="tile">3</div>
+                <div class="tile">4</div>
+                <div class="tile">5</div>
+                <div class="tile">6</div>
+                <div class="tile">7</div>
+                <div class="tile">8</div> -->
+    <div class="controls">
+        <button id="setPlayer">Set Player 1</button>
+        <button id="reset" disabled>Reset</button>
+    </div>
+
+    <div id="message"></div>
+
+<!-- javascript -->
+    <script src="battleNight.js"></script>
+</body>
+</html>
